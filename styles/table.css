@@ -1,0 +1,257 @@
+body {
+  margin: 0;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-x: hidden;
+}
+
+.topBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  background-color: rgba(56, 32, 4, 0.6);
+  padding: 10px 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+}
+
+.menu li {
+  padding: 5px;
+  display: inline;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: white;
+  color: rgba(7, 25, 82, 0.8);
+}
+
+.header {
+  background-image: url("/src/images/greenHouse.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 230px;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 0px;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.table th:hover,
+.table td:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid #145c46;
+}
+
+.headerRow th {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+}
+
+.blueHeader {
+  background-color: #102c57;
+}
+
+.greenHeader {
+  background-color: #1a5319;
+}
+
+.blueColumn {
+  background-color: rgba(53, 92, 125, 0.1);
+  color: #102c57;
+}
+
+.greenColumn {
+  background-color: rgba(64, 165, 120, 0.3);
+  color: #1a5319;
+}
+
+.caption {
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #243879;
+  text-align: center;
+  border-bottom: 2px solid #bbcca5;
+  padding-bottom: 25px;
+}
+
+.backgroundText {
+  background-image: url("/src/images/plants.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  height: 500px;
+}
+
+.backgroundText::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(3, 31, 22, 0.7);
+  z-index: 1;
+}
+
+.backgroundText h1,
+.backgroundText pre {
+  position: relative;
+  z-index: 2;
+}
+.justifiedText {
+  white-space: normal;
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.5em;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(19, 167, 120, 0.37);
+  box-shadow: 4px 6px 10px rgba(49, 49, 56, 0.61);
+}
+.footerTable {
+  background-color: #1a1a19;
+  color: #cbd2a4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+}
+.footerContainer {
+  background-color: #3a3a05;
+  width: 100%;
+  color: #cbd2a4;
+  padding: 25px;
+  text-align: center;
+  border-top: 3px solid #707552;
+  font-size: 1em;
+  margin-top: 300px;
+}
+.footerContainer {
+  background-color: #798645;
+  width: 100%;
+  color: #cbd2a4;
+  padding: 25px;
+  text-align: center;
+  border-top: 3px solid #707552;
+  font-size: 1em;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+.footerContainer h1 {
+  margin: 0;
+  padding: 5px;
+  color: #cbd2a4;
+}
+
+.footerContainer h3 {
+  color: #cbd2a4;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.socialIcons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.icon {
+  color: #cbd2a4;
+  text-decoration: none;
+  font-size: 3em;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #cbd2a4;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  color: #707552;
+  border-color: #707552;
+}
+
+.icon::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #707552;
+  color: #282e04;
+  padding: 5px 10px;
+  border-radius: 10px;
+  opacity: 0;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+.icon:hover::after {
+  opacity: 1;
+  bottom: -80px;
+}
+.customLine {
+  border: none;
+  border-top: 3px solid #cbd2a4;
+  width: 100%;
+  margin-top: 90px;
+}
+
+.myIframe {
+  display: block;
+  margin: 10px auto;
+  height: 200px;
+  width: 80%;
+  border-color: rgba(19, 167, 120, 0.37);
+  border-width: 2px;
+  border-radius: 10px;
+  box-shadow: 4px 6px 10px #707552;
+}
