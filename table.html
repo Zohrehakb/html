@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>جدول برای تسک دوم</title>
     <link rel="stylesheet" href="styles/table.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -15,10 +16,13 @@
   <body>
     <header class="topBar">
       <ul class="menu">
+        <li>
+          <img class="burgerIcon" src="src/svg/burger.svg" alt="menu" />
+        </li>
         <li><a href="#">صفحه اصلی</a></li>
         <li><a href="#">محصولات</a></li>
         <li><a href="#">لیست قیمت‌ها و بروشورها</a></li>
-        <li><a href="#">پیشنهادات ویژه</a></li>
+        <li><a href="#table">پیشنهادات ویژه</a></li>
         <li><a href="#"> قیمت</a></li>
         <li><a href="#contact">تماس با ما</a></li>
         <li><a href="#greenHouse">سؤالات متداول</a></li>
@@ -28,7 +32,7 @@
     <div class="header"></div>
 
     <div>
-      <table class="table">
+      <table id="table" class="table">
         <colgroup>
           <col class="blueColumn" span="2" />
           <col class="greenColumn" span="2" />
@@ -82,9 +86,10 @@
         </tfoot>
       </table>
     </div>
-    <div class="backgroundText">
+
+    <div id="greenHouse" class="backgroundText">
       <h1>چرا ما را انتخاب کنید؟</h1>
-      <pre id="greenHouse" class="justifiedText">
+      <pre class="justifiedText">
         کارخانه گلخانه ای Cangzhou Zechen چین واقع در شهر بوتو، استان هبی، از
         مزیت جغرافیایی بی نظیر، با حمل و نقل راحت در آستانه آن. تو در شمال پکن و
         تیانجین، و به سمت شرق رو به دریای بوهای، از نزدیکی آن به راه آهن پکن-شانگهای سود می برد.
@@ -101,23 +106,23 @@
       <h3>تماس با ما</h3>
       <div class="socialIcons">
         <a href="#" class="icon instagram" data-info=" @arpa">
-          <i class="fab fa-instagram"></i>
+          <img src="src/svg/instagram.svg" alt="Instagram" />
         </a>
         <a href="tel:+123456789" class="icon phone" data-info="09168547916">
-          <i class="fas fa-phone"></i>
+          <img src="src/svg/phone.svg" alt="Phone" />
         </a>
         <a
           href="mailto:arpa@gmail.com"
           class="icon email"
           data-info="arpa@gmail.com"
         >
-          <i class="fas fa-envelope"></i>
+          <img src="src/svg/email.svg" alt="Email" />
         </a>
         <a href="#" class="icon whatsapp" data-info="09168547916">
-          <i class="fab fa-whatsapp"></i>
+          <img src="src/svg/whatsapp.svg" alt="WhatsApp" />
         </a>
         <a href="#" class="icon facebook" data-info="arpa">
-          <i class="fab fa-facebook"></i>
+          <img src="src/svg/facebook.svg" alt="Facebook" />
         </a>
         <address>
           <a
@@ -125,7 +130,7 @@
             class="icon address"
             data-info="ارومیه جاده سرو- پارک علم و فناوری- مرکز رشد- واحد 9"
           >
-            <i class="fas fa-map-marker-alt"></i>
+            <img src="src/svg/location.svg" alt="Address" />
           </a>
         </address>
       </div>
