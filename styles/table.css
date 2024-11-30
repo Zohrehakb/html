@@ -134,9 +134,10 @@ body {
   color: white;
   padding: 40px;
   text-align: center;
-  margin-top: 20px;
   position: relative;
   height: 500px;
+  z-index: 1;
+  margin-top: -20px;
 }
 
 .backgroundText::before {
@@ -266,4 +267,87 @@ body {
   border-width: 2px;
   border-radius: 10px;
   box-shadow: 4px 6px 10px #707552;
+}
+.discount-button-container {
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 5;
+}
+
+.discount-button {
+  background-color: #ee0e33;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 4px 6px 10px #ee0e33b2;
+  font-family: "Lucida Sans", sans-serif;
+  animation: colorAnimation 1s infinite alternate;
+
+  animation: moveButton 1s infinite steps(1);
+  /*animation: moveButton 4s linear infinite; */
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+}
+
+.discount-button:hover {
+  animation-play-state: running;
+  background-color: #2a59f1;
+  box-shadow: 4px 6px 10px #2a58f1b4;
+}
+/* کانتینر */
+
+@keyframes colorAnimation {
+  0% {
+    background-color: #ee0e33;
+  }
+  50% {
+    background-color: #ff9800;
+  }
+  100% {
+    background-color: #2a58f1b4;
+  }
+}
+@keyframes moveButton {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  10% {
+    transform: translate(6cm, -6cm);
+  }
+  20% {
+    transform: translate(-6cm, -6cm);
+  }
+  30% {
+    transform: translate(6cm, 6cm);
+  }
+  40% {
+    transform: translate(-6cm, 6cm);
+  }
+  50% {
+    transform: translate(6cm, 6cm);
+  }
+  60% {
+    transform: translate(-6cm, -6cm);
+  }
+  70% {
+    transform: translate(6cm, -6cm);
+  }
+  80% {
+    transform: translate(-6cm, 6cm);
+  }
+  90% {
+    transform: translate(6cm, -6cm);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
